@@ -1,0 +1,134 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:#020617;
+  color:white;
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+}
+
+/* GRID */
+.grid-bg{
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,.04) 1px, transparent 1px);
+  background-size:40px 40px;
+  animation:grid 12s linear infinite;
+  z-index:-2;
+}
+@keyframes grid{
+  to{transform:translateY(40px)}
+}
+
+/* SCANLINE */
+.scanline{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(to bottom, transparent, rgba(0,255,255,.05), transparent);
+  animation:scan 4s linear infinite;
+  pointer-events:none;
+}
+@keyframes scan{
+  0%{transform:translateY(-100%)}
+  100%{transform:translateY(100%)}
+}
+
+/* NAV */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 8%;
+  border-bottom:1px solid rgba(0,255,255,.3);
+  backdrop-filter:blur(6px);
+}
+.logo{
+  font-family:'Orbitron';
+  letter-spacing:3px;
+  color:cyan;
+  animation:glitch 2s infinite;
+}
+@keyframes glitch{
+  0%{text-shadow:2px 0 cyan,-2px 0 magenta}
+  50%{text-shadow:-2px 0 cyan,2px 0 magenta}
+  100%{text-shadow:0 0 cyan}
+}
+.navbar nav a{
+  margin-left:25px;
+  color:#aaa;
+  text-decoration:none;
+}
+
+/* MAIN */
+.container{
+  min-height:90vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  padding:60px 8%;
+}
+
+.form-card,.result-card{
+  background:rgba(0,255,255,.04);
+  border:1px solid rgba(0,255,255,.4);
+  padding:40px;
+  border-radius:15px;
+  box-shadow:0 0 40px rgba(0,255,255,.3);
+  backdrop-filter:blur(10px);
+}
+
+.neon-text{
+  font-family:'Orbitron';
+  color:cyan;
+  margin-bottom:25px;
+}
+
+input{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  background:transparent;
+  border:1px solid rgba(0,255,255,.6);
+  border-radius:8px;
+  color:cyan;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:2px solid cyan;
+  background:transparent;
+  color:cyan;
+  letter-spacing:2px;
+  border-radius:40px;
+  cursor:pointer;
+  box-shadow:0 0 20px cyan;
+  transition:.4s;
+}
+
+button:hover{
+  background:cyan;
+  color:black;
+  box-shadow:0 0 50px cyan;
+}
+
+#loader{
+  color:cyan;
+  margin-bottom:20px;
+  font-family:'Orbitron';
+}
+
+ul{list-style:none}
+li{
+  margin-bottom:15px;
+  padding:12px;
+  border-left:3px solid cyan;
+  animation:fade .5s ease-in;
+}
+@keyframes fade{
+  from{opacity:0;transform:translateX(-20px)}
+  to{opacity:1;transform:translateX(0)}
+}
+
+
