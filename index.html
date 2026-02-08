@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravan sahita</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="scanline"></div>
+
+<header class="navbar">
+  <div class="logo glitch">maa durga ki jai vyakaran </div>
+  <nav>
+    <a href="#">ravan</a>
+    <a href="#">sahita</a>
+    <a href="#">Prediction</a>
+    <a href="#">System</a>
+  </nav>
+</header>
+
+<section class="container">
+
+<div class="form-card">
+  <h2 class="neon-text">BIRTH DATA INPUT</h2>
+  <input type="text" id="name" placeholder="Full Name">
+  <input type="date" id="dob">
+  <input type="time" id="tob">
+  <input type="text" id="place" placeholder="Place of Birth">
+  <button onclick="startPrediction()">RUN NEURAL SCAN</button>
+</div>
+
+<div class="result-card">
+  <h2 class="neon-text">AI FUTURE OUTPUT</h2>
+  <div id="loader">SYSTEM IDLE...</div>
+  <ul id="results"></ul>
+</div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
